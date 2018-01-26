@@ -1,21 +1,36 @@
-# Introduction {#intro}
+# Directory Structure and File Naming Standards
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+General file naming standards:
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+- Use CamelCode for the study name (e.g. StatinDiscontinuationStudyRCTData)
+- Study instruments (forms) should be numbered in the chronological order
+  administered, followed by a descriptive name.  If a code or numbering system
+  was used during the study, this can follow the number and descriptive
+  name: 01\_Eligibility\_SDSRCT01.pdf
+- Use underscores or hyphens to separate information in filenames. Do not use
+  spaces within filenames.  
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+Structure: 
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+1. Study name
+    1. Code
+        a. Data cleaning
+        b. Analysis dataset generation (if applicable)
+        c. Descriptive and Primary Analysis
+    1. Data
+        a. Raw
+        a. Clean
+        a. Analysis (if applicable)
+    1. Documentation
+        a. Raw dataset dictionary
+        a. Clean dataset dictionay
+        a. Study Tools/Instruments
+    1. Protocols
+        a. Study Protocol (PDF)
+    1. Publications
+        a. Bibtex file of references for all publications based on study,
+           including url/uri to online location
+        a. PDF for articles that can be opening shared
+    1. Reports
+        a. Summary and Statistical Reports
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
