@@ -8,9 +8,9 @@ set -e
 git config --global user.email "matthew.mulvahill@ucdenver.edu"
 git config --global user.name "Matt Mulvahill"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
+git clone -b master https://${GITHUB_PAT}@github.com/palliativecare.github.io.git book-output
 cd book-output
 cp -r ../_book/* ./
 git add --all *
 git commit -m"Update the book" || true
-git push -q origin gh-pages
+git push -q origin master
