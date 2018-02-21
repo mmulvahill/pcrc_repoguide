@@ -1,3 +1,3 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/ for how to compile this example.
+[![Build Status](https://travis-ci.org/palliativecare/pcrc_dataguide.svg?branch=master)](https://travis-ci.org/palliativecare/pcrc_dataguide)
 
-You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/
+This is the development repository for the PCRC Data Repository guidebook.  Files (pages) should be edited, committed, and pushed to this repository.  Travis CI handles publishing changes made here to the website repository (palliatiavecare.github.io).
